@@ -1,3 +1,5 @@
+package Arrays;
+
 public class powerfunction {
     public int pow(int A, int B, int C) {
         if (A == 0)
