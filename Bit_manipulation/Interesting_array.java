@@ -29,6 +29,4 @@ public class Interesting_array {
             return "No";
         }
     }
-    }
-    
 }

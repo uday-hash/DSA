@@ -20,7 +20,14 @@ Problem Constraints
 
 package LinkedList;
 
-
+class Node{
+    int data;
+    Node next;
+    Node(int data){
+        this.data = data;
+        this.next = null;
+    }
+}
 public class Linked_list {
     public static void insert_node(int position, int value) {
         // YOUR CODE GOES HERE
@@ -43,15 +50,10 @@ public class Linked_list {
     }
 
     public static void delete_node(int position) {
-        
-      
 
     }
 
     public static void print_ll() {
         // Output each element followed by a space
     }
-
-
-    
 }
