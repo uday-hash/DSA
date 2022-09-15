@@ -25,7 +25,7 @@ public class Star_pattern {
                 System.out.print(" ");
             }
             for (k = 1; k <= 2 * i - 1; k++) {
-                if (k == 1 || k == 2 * i - 1 || i == n) {
+                if (k == 1 || k == 2 * i - 1) {
                     System.out.print("*");
                 } else {
                     System.out.print(" ");
@@ -38,7 +38,7 @@ public class Star_pattern {
                 System.out.print(" ");
             }
             for (k = 1; k <= 2 * i - 1; k++) {
-                if (k == 1 || k == 2 * i - 1 || i == n) {
+                if (k == 1 || k == 2 * i - 1) {
                     System.out.print("*");
                 } else {
                     System.out.print(" ");
@@ -46,8 +46,6 @@ public class Star_pattern {
             }
             System.out.println();
         }
-        
-    }
 
-    
+    }   
 }
