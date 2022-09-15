@@ -1,0 +1,118 @@
+package Arrays.Oops;
+
+/*
+1) If class A is derived from another derived class B which is derived from class C, 
+    which class will have maximum level of abstraction?
+    Ans : Class C
+*/
+class car
+{ 
+    int speed;
+    public : int* getSpeed()
+    { 
+        return &speed; 
+    }
+};
+
+int main()
+{
+    car c;
+    int *ptr=c.getSpeed();
+    return 0;
+}
+/* 
+Which of following is true about the above code?
+    A) Error exists
+    B) Code is logically correct
+    C) Encapsulation is not followed
+    D) Inheritance is not followed
+    E) Unexpected output
+
+    Ans : C
+
+    Members which are not intended to be inherited are declared as:
+    A) Private
+    B) Protected
+    C) Public
+    D) None of the above
+
+    Ans : A
+
+*/
+
+Find the output of the program:
+
+class main_class
+{
+public static void main(String args[])
+{
+int x = 9;
+if (x == 9)
+{
+int x = 8;
+System.out.println(x);
+}
+}
+}
+
+A) 8
+B) 9
+C) Compilation error
+D) Runtime error
+E) None of the above
+
+Ans : C
+
+What will be the output of following code
+
+
+#include <unistd.h>
+main(){
+      fork();
+      fork();
+      printf("Hi");
+}
+
+Ans : Hi Hi Hi Hi
+
+============================================================================
+
+ How many Processes (fork() function)
+    will be created by the following code?
+
+#include <unistd.h>
+main(){
+    int i;
+    for(i=0;i<10;i++){
+        if(i%2==0)
+            fork();
+    return 0;
+}
+
+Ans :
+
+
+
+============================================================================
+
+
+ How many Child Processes (fork() function)
+
+
+ #include <unistd.h>
+ main(){
+     int i;
+     for(i=0;i<10;i++){
+         if(i%2==0)
+             fork();
+     return 0;
+ }
+
+
+ Ans : 1024
+
+
+
+
+
+
