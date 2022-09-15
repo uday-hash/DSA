@@ -1,22 +1,21 @@
-/*
- * Problem Description
-You are given the root node of a binary tree A. You have to find the number of nodes in this tree.
+/*Problem Description
+
+You are given the root node of a binary tree A. You have to find the sum of node values of this tree.
 
 
 
 Problem Constraints
+
 1 <= Number of nodes in the tree <= 105
 
-0 <= Value of each node <= 107
- */
+0 <= Value of each node <= 104 */
+package Trees;
 
- package Trees;
-
- public class Nodes_count{
+public class Nodes_sum {
     public int solve(TreeNode A) {
         if(A == null)
             return 0;
-        return 1 + solve(A.left) + solve(A.right);
+        return A.val + solve(A.left) + solve(A.right);
     }
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);
@@ -31,12 +30,12 @@ Problem Constraints
         root.left.right.left = new TreeNode(10);
      
 
-        Nodes_count obj = new Nodes_count();
+        Nodes_sum obj = new Nodes_sum();
         System.out.println(obj.solve(root));
     }
- }
-
- class TreeNode {
+    
+}
+class TreeNode {
     int val;
     TreeNode left;
     TreeNode right;
@@ -44,6 +43,5 @@ Problem Constraints
       val = x;
       left=null;
       right=null;
-    }
-}
-  
+      }
+  }

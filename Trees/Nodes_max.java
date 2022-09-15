@@ -1,22 +1,22 @@
-/*
- * Problem Description
-You are given the root node of a binary tree A. You have to find the number of nodes in this tree.
+/*Problem Description
+
+You are given the root node of a binary tree A. You have to find the max value of all node values of this tree.
 
 
 
 Problem Constraints
+
 1 <= Number of nodes in the tree <= 105
 
-0 <= Value of each node <= 107
- */
+0 <= Value of each node <= 104 */
 
- package Trees;
+package Trees;
 
- public class Nodes_count{
+public class Nodes_max {
     public int solve(TreeNode A) {
         if(A == null)
             return 0;
-        return 1 + solve(A.left) + solve(A.right);
+        return Math.max(A.val, Math.max(solve(A.left), solve(A.right)));
     }
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);
@@ -31,12 +31,13 @@ Problem Constraints
         root.left.right.left = new TreeNode(10);
      
 
-        Nodes_count obj = new Nodes_count();
+        Nodes_max obj = new Nodes_max();
         System.out.println(obj.solve(root));
     }
- }
-
- class TreeNode {
+    
+}
+    
+class TreeNode {
     int val;
     TreeNode left;
     TreeNode right;
@@ -44,6 +45,5 @@ Problem Constraints
       val = x;
       left=null;
       right=null;
-    }
-}
-  
+      }
+  }
