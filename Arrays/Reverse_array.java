@@ -1,19 +1,19 @@
 package Arrays;
 
-import java.util.*;
-import java.lang.*;
-
+import java.util.Scanner;
+import java.util.Arrays;
 
 public class Reverse_array {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         int[] A = new int[6];
-        A[0] = in.nextInt();
+        A[0] = sc.nextInt();
         for (int i = 1; i < A.length; i++) {
-            A[i] = in.nextInt();
+            A[i] = sc.nextInt();
         }
         solve(A);
         System.out.println(Arrays.toString(A));
+        sc.close();
     }
 
     public static int[] solve(final int[] A){

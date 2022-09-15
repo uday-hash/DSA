@@ -1,6 +1,6 @@
 package Arrays;
 
-import java.lang.*;
+//import java.lang.*;
 import java.util.*;
 
 public class Search_element {
@@ -27,5 +27,6 @@ public class Search_element {
             }
             System.out.println(found);
         }
+        sc.close();
     }
 }

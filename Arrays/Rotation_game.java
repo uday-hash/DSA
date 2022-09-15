@@ -1,6 +1,6 @@
 package Arrays;
 
-import java.lang.*;
+//import java.lang.*;
 import java.util.*;
 
 public class Rotation_game {
@@ -29,5 +29,6 @@ public class Rotation_game {
             System.out.print(A[i] + " ");
         }
         System.out.println("");
+        sc.close();
     }
 }
