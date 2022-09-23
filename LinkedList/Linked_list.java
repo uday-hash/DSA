@@ -1,8 +1,8 @@
-package LinkedList;
 /*
  * Problem Description
 Design and implement a Linked List data structure.
-A node in a linked list should have the following attributes - an integer value and a pointer to the next node. It should support the following operations:
+A node in a linked list should have the following attributes - an integer value
+* and a pointer to the next node. It should support the following operations:
 
 insert_node(position, value) - To insert the input value at the given position in the linked list.
 delete_node(position) - Delete the value at the given position from the linked list.
@@ -20,40 +20,88 @@ Problem Constraints
 
 package LinkedList;
 
-class Node{
+class node {
     int data;
-    Node next;
-    Node(int data){
-        this.data = data;
+    node next;
+    public node() {
+        this.data = 0;
         this.next = null;
     }
 }
+
+
 public class Linked_list {
     public static void insert_node(int position, int value) {
-        // YOUR CODE GOES HERE
-        // Please take input and print output to standard input/output (stdin/stdout)
-        // DO NOT USE ARGUMENTS FOR INPUTS
-        // E.g. 'Scanner' for input & 'System.out' for output
-        Node temp = head;
-        Node newNode = new Node(value);
-        if (position == 1) {
-            newNode.next = head;
-            head = newNode;
-            return;
+        node root = null;
+        int size_of_ll = 0;
+        // @params position, integer
+        // @params value, integer
+
+        if (position >= 1 && position <= size_of_ll + 1) {
+            node temp = new node();
+            temp.data = value;
+            if (position == 1) {
+                temp.next = root;
+                root = temp;
+            } else {
+                int count = 1;
+                node prev = root;
+                while (count < position - 1) {
+                    prev = prev.next;
+                    count++;
+                }
+                temp.next = prev.next;
+                prev.next = temp;
+
+            }
+            size_of_ll++;
+
         }
-        for (int i = 1; i < position - 1; i++) {
-            temp = temp.next;
+    }
+
+
+        public static void delete_node ( int position){
+            // @params position, integer
+            // @return void
+            int size_of_ll = 0;
+            if (position >= 1 && position <= size_of_ll) {
+                node temp = null;
+                if (position == 1) {
+                    temp = root;
+                    root = root.next;
+                } else {
+                    int count = 1;
+                    node prev = root;
+                    while (count < position - 1) {
+                        prev = prev.next;
+                        count++;
+                    }
+                    temp = prev.next;
+                    prev.next = prev.next.next;
+                }
+                size_of_ll--;
+            }
+
+
         }
-        newNode.next = temp.next;
-        temp.next = newNode;
 
-    }
+        public static void print_ll () {
+            // @return void
+            // Write your code here
+            node temp = root;
+            int flag = 0;
+            while (temp != null) {
+                if (flag == 0) {
+                    System.out.print(temp.data);
+                    flag = 1;
+                } else
+                    System.out.print(" " + temp.data);
+                temp = temp.next;
+            }
 
-    public static void delete_node(int position) {
 
-    }
+        }
+    
 
-    public static void print_ll() {
-        // Output each element followed by a space
-    }
 }
+

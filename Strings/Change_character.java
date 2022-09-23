@@ -18,24 +18,9 @@ package Strings;
 
 public class Change_character {
     public int solve(String A, int B) {
-        int[] count = new int[26];
-        for(int i = 0; i < A.length(); i++){
-            count[A.charAt(i) - 'a']++;
-        }
-        int ans = 0;
-        for(int i = 0; i < 26; i++){
-            if(count[i] > 0){
-                ans++;
-            }
-        }
-        int max = 0;
-        for(int i = 0; i < 26; i++){
-            if(count[i] > max){
-                max = count[i];
-            }
-        }
-        return Math.min(ans + B, max);
+        
     }
+
 
     public static void main(String[] args) {
         Change_character obj = new Change_character();

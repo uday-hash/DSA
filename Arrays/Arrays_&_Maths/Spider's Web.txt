@@ -1,0 +1,6 @@
+A spider is trying to build a web for itself. The web built by it doubles every day.
+
+If the spider entirely built the web in 15 days, how many days did it take for the
+spider to build 25% of the web?
+
+Ans:  13 days

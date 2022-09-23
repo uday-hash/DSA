@@ -31,4 +31,8 @@ public class Rotation_game {
         System.out.println("");
         sc.close();
     }
+
+
 }
+
+

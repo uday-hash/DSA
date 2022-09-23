@@ -30,7 +30,63 @@ package Arrays.Advance_Arrays1;
 import java.util.ArrayList;
 
 public class Max_non_negative_subArray {
-    public ArrayList<Integer> maxset(ArrayList<Integer> A) {        
+    public ArrayList<Integer> maxset(ArrayList<Integer> A) { 
+        int n = A.size();
+        int max_sum = 0;
+        int max_len = 0;
+        int max_start = 0;
+        int start = 0;
+        int sum = 0;
+        int len = 0;
+        for (int i = 0; i < n; i++){
+            if (A.get(i) >= 0){
+                sum += A.get(i);
+                len++;
+            }
+            else{
+                if (sum > max_sum){
+                    max_sum = sum;
+                    max_len = len;
+                    max_start = start;
+                }
+                else if (sum == max_sum){
+                    if (len > max_len){
+                        max_len = len;
+                        max_start = start;
+                    }
+                }
+                sum = 0;
+                len = 0;
+                start = i + 1;
+            }
+        }
+        if (sum > max_sum){
+            max_sum = sum;
+            max_len = len;
+            max_start = start;
+        }
+        else if (sum == max_sum){
+            if (len > max_len){
+                max_len = len;
+                max_start = start;
+            }
+        }
+        ArrayList<Integer> ans = new ArrayList<Integer>();
+        for (int i = max_start; i < max_start + max_len; i++){
+            ans.add(A.get(i));
+        }
+        return ans;       
+    }
+    public static void main(String[] args) {
+        Max_non_negative_subArray obj = new Max_non_negative_subArray();
+        ArrayList<Integer> A = new ArrayList<Integer>();
+        A.add(1);
+        A.add(2);
+        A.add(5);
+        A.add(-7);
+        A.add(2);
+        A.add(3);
+        System.out.println(obj.maxset(A));
     }
     
 }

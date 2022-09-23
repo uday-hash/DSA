@@ -43,7 +43,7 @@ public class First_repeating_element {
         return min;
         
     }
-public static void main(String[] args) {
+    public static void main(String[] args) {
         First_repeating_element obj = new First_repeating_element();
         ArrayList<Integer> A = new ArrayList<Integer>();
         A.add(10);
