@@ -32,50 +32,45 @@ import java.util.ArrayList;
 public class Max_non_negative_subArray {
     public ArrayList<Integer> maxset(ArrayList<Integer> A) { 
         int n = A.size();
-        int max_sum = 0;
-        int max_len = 0;
-        int max_start = 0;
+        int max = Integer.MIN_VALUE;
         int start = 0;
+        int end = 0;
+        int temp_start = 0;
+        int temp_end = 0;
+        int temp_sum = 0;
         int sum = 0;
-        int len = 0;
-        for (int i = 0; i < n; i++){
-            if (A.get(i) >= 0){
-                sum += A.get(i);
-                len++;
-            }
-            else{
-                if (sum > max_sum){
-                    max_sum = sum;
-                    max_len = len;
-                    max_start = start;
+        for(int i=0;i<n;i++){
+            if(A.get(i) >= 0){
+                temp_sum += A.get(i);
+                temp_end = i;
+                if(temp_sum > sum){
+                    sum = temp_sum;
+                    start = temp_start;
+                    end = temp_end;
                 }
-                else if (sum == max_sum){
-                    if (len > max_len){
-                        max_len = len;
-                        max_start = start;
+                else if(temp_sum == sum){
+                    if(temp_end - temp_start > end - start){
+                        start = temp_start;
+                        end = temp_end;
+                    }
+                    else if(temp_end - temp_start == end - start){
+                        if(temp_start < start){
+                            start = temp_start;
+                            end = temp_end;
+                        }
                     }
                 }
-                sum = 0;
-                len = 0;
-                start = i + 1;
+            }
+            else{
+                temp_sum = 0;
+                temp_start = i+1;
             }
         }
-        if (sum > max_sum){
-            max_sum = sum;
-            max_len = len;
-            max_start = start;
-        }
-        else if (sum == max_sum){
-            if (len > max_len){
-                max_len = len;
-                max_start = start;
-            }
-        }
-        ArrayList<Integer> ans = new ArrayList<Integer>();
-        for (int i = max_start; i < max_start + max_len; i++){
+        ArrayList<Integer> ans = new ArrayList<>();
+        for(int i=start;i<=end;i++){
             ans.add(A.get(i));
         }
-        return ans;       
+        return ans;         
     }
     public static void main(String[] args) {
         Max_non_negative_subArray obj = new Max_non_negative_subArray();

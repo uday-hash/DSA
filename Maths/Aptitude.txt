@@ -1,0 +1,20 @@
+If two dice are thrown, 
+what is the probability that the sum of the two dice will be a prime number?
+
+Choose the correct answer from the following:
+
+A) 5/36
+B) 5/18
+C) 5/12
+D) 1/2
+
+Ans: C
+
+Explaination:
+
+1. The two dice have 36 possible outcomes. 6*6=36
+2. The sum of the two dice can be 2,3,4,5,6,7,8,9,10,11,12. There are 11 possible outcomes.
+3. The sum of the two dice can be 2,3,5,7,9,11. There are 6 possible outcomes.
+4. The sum of the two dice can be 5,7,11. There are 3 possible outcomes.
+5. Hence, the probability of the sum of the two dice being a prime number is 3/11=5/18=5/12
+6. The probability of the sum of the two dice being a prime number is 5/12. Hence, the correct answer is C.
