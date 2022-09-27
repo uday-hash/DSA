@@ -20,6 +20,5 @@ import java.util.ArrayList;
 public class Pairs_with_given_sum_II {
     public int solve(ArrayList<Integer> A, int B) {
         
-    }
-    
+    }    
 }

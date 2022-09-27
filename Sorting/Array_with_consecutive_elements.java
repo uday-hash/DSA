@@ -54,7 +54,7 @@ public class Array_with_consecutive_elements {
         A.add(109);
         A.add(110);
     
-      System.out.println(obj.solve(A));
+      System.out.println(obj.solve(A)); 
       
     }
 }

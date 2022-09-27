@@ -36,6 +36,21 @@ public class Binary_tree_from_inorder_and_postorder {
         root.right=build(A,B,k+1,inEnd,postStart+k-inStart,postEnd-1);
         return root;
     }
+    public static void main(String[] args) {
+        Binary_tree_from_inorder_and_postorder b = new Binary_tree_from_inorder_and_postorder();
+        ArrayList<Integer> A = new ArrayList<Integer>();
+        A.add(2);
+        A.add(1);
+        A.add(3);
+        ArrayList<Integer> B = new ArrayList<Integer>();
+        B.add(2);
+        B.add(3);
+        B.add(1);
+        TreeNode root = b.buildTree(A, B);
+        System.out.println(root.val);
+        System.out.println(root.left.val);
+        System.out.println(root.right.val);
+    }
     
 }
 
