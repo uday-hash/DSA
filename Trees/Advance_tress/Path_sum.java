@@ -1,29 +1,29 @@
 /*
  * Problem Description
-Given a binary tree of integers. Find the difference between the sum of nodes at odd level and sum of nodes at even level.
-
-NOTE: Consider the level of root node as 1.
+Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that
+ adding up all the values along the path equals the given sum.
 
 
 
 Problem Constraints
-1 <= Number of nodes in binary tree <= 100000
+1 <= number of nodes <= 105
 
-0 <= node values <= 109
+-100000 <= B, value of nodes <= 100000
  */
+
 package Trees.Advance_tress;
 
-public class Odd_and_even_level {
-    public int solve(TreeNode A) {
+public class Path_sum {
+    public int hasPathSum(TreeNode A, int B) {
         if(A == null)
             return 0;
-        return A.val - solve(A.left) - solve(A.right);
+        if(A.left == null && A.right == null && A.val == B)
+            return 1;
+        return hasPathSum(A.left, B - A.val) | hasPathSum(A.right, B - A.val);
     }
 
-    
-
     public static void main(String[] args) {
-        Odd_and_even_level o = new Odd_and_even_level();
+        Path_sum p = new Path_sum();
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
         root.right = new TreeNode(3);
@@ -31,11 +31,12 @@ public class Odd_and_even_level {
         root.left.right = new TreeNode(5);
         root.right.left = new TreeNode(6);
         root.right.right = new TreeNode(7);
-        System.out.println(o.solve(root));
+        System.out.println(p.hasPathSum(root, 10));
     }
-
 }
-class  TreeNode {
+    
+
+class TreeNode {
     int val;
     TreeNode left;
     TreeNode right;
