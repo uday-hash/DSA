@@ -17,7 +17,21 @@ package Trees.Advance_tress;
 
 public class Least_common_ancestor {
     public int lca(TreeNode A, int B, int C) {
-        
+        if(A == null)
+            return -1;
+        if(A.val == B || A.val == C)
+            return A.val;
+        int left = lca(A.left, B, C);
+        int right = lca(A.right, B, C);
+        if(left == -1 && right == -1)
+            return -1;
+        if(left == -1)
+            return right;
+        if(right == -1)
+            return left;
+        return A.val;
+    }
+}
     }
 
 

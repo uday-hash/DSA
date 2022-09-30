@@ -12,9 +12,10 @@ Problem Constraints
  */
 package Tries;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Max_XOR_subarray {
     public ArrayList<Integer> solve(ArrayList<Integer> A) {
+        
     }    
 }

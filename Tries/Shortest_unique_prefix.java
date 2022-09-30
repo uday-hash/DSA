@@ -1,52 +1,69 @@
 package Tries;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Shortest_unique_prefix {
     public ArrayList<String> prefix(ArrayList<String> A) {
-        TrieNode root = new TrieNode();
-        for (String word : A) {
-            insert(root, word);
+        Trie trie = new Trie();
+        for (int i = 0; i < A.size(); i++) {
+            trie.insert(A.get(i));
         }
-        ArrayList<String> result = new ArrayList<>();
-        for (String word : A) {
-            result.add(getPrefix(root, word));
+        ArrayList<String> ans = new ArrayList<>();
+        for (int i = 0; i < A.size(); i++) {
+            ans.add(trie.getPrefix(A.get(i)));
         }
-        return result;
+        return ans;
+    }
+    class TrieNode {
+        Map<Character, TrieNode> map;
+        boolean isEnd;
+        int count;
+        public TrieNode() {
+            map = new HashMap<>();
+            isEnd = false;
+            count = 0;
+        }
+    }
+    class Trie {
+        TrieNode root;
+        public Trie() {
+            root = new TrieNode();
+        }
+        public void insert(String word) {
+            TrieNode curr = root;
+            for (int i = 0; i < word.length(); i++) {
+                char c = word.charAt(i);
+                if (!curr.map.containsKey(c)) {
+                    curr.map.put(c, new TrieNode());
+                }
+                curr = curr.map.get(c);
+                curr.count++;
+            }
+            curr.isEnd = true;
+        }
+        public String getPrefix(String word) {
+            TrieNode curr = root;
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < word.length(); i++) {
+                char c = word.charAt(i);
+                sb.append(c);
+                curr = curr.map.get(c);
+                if (curr.count == 1) {
+                    return sb.toString();
+                }
+            }
+            return "";
+        }
     }
 
-    private void insert(TrieNode root, String word) {
-        TrieNode current = root;
-        for (int i = 0; i < word.length(); i++) {
-            int index = word.charAt(i) - 'a';
-            if (current.children[index] == null) {
-                current.children[index] = new TrieNode();
-            }
-            current = current.children[index];
-        }
-        current.isEndOfWord = true;
-    }
-
-    private String getPrefix(TrieNode root, String word) {
-        TrieNode current = root;
-        String result = "";
-        for (int i = 0; i < word.length(); i++) {
-            int index = word.charAt(i) - 'a';
-            result += word.charAt(i);
-            current = current.children[index];
-            if (current.isEndOfWord) {
-                break;
-            }
-        }
-        return result;
+    public static void main(String[] args) {
+        Shortest_unique_prefix obj = new Shortest_unique_prefix();
+        ArrayList<String> A = new ArrayList<>();
+        A.add("zebra");
+        A.add("dog");
+        A.add("duck");
+        A.add("dove");
+        System.out.println(obj.prefix(A));
     }
 }
     
-class TrieNode {
-    TrieNode[] children;
-    boolean isEndOfWord;
-    public TrieNode() {
-        children = new TrieNode[26];
-        isEndOfWord = false;
-    }
-}

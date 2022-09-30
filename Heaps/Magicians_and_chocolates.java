@@ -38,4 +38,15 @@ public class Magicians_and_chocolates {
         }
         return (int) (sum % 1000000007);
     }
+    public static void main(String[] args) {
+        Magicians_and_chocolates mc = new Magicians_and_chocolates();
+        ArrayList<Integer> B = new ArrayList<>();
+        B.add(2147483647);
+        B.add(2000000014);
+        B.add(2147483647);
+        System.out.println(mc.nchoc(10, B));
+    }
 }
+
+
+

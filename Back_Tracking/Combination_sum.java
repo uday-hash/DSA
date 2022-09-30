@@ -29,11 +29,46 @@ Problem Constraints
 
 package Back_Tracking;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Combination_sum {
     public ArrayList<ArrayList<Integer>> combinationSum(ArrayList<Integer> A, int B) {
-        
+        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+        ArrayList<Integer> current = new ArrayList<Integer>();
+        A.sort(null);
+        combinationSum(A, result, current, 0, B);
+        return result;
+    }
 
+    public void combinationSum(ArrayList<Integer> A, ArrayList<ArrayList<Integer>> result, ArrayList<Integer> current, int i, int B) {
+        if (B == 0) {
+            result.add(new ArrayList<Integer>(current));
+            return;
+        }
+        for (int j = i; j < A.size(); j++) {
+            if (j > i && A.get(j) == A.get(j - 1)) {
+                continue;
+            }
+            if (B - A.get(j) < 0) {
+                break;
+            }
+            current.add(A.get(j));
+            combinationSum(A, result, current, j, B - A.get(j));
+            current.remove(current.size() - 1);
+        }
+    }
+
+    public static void main(String[] args) {
+        Combination_sum s = new Combination_sum();
+        ArrayList<Integer> A = new ArrayList<Integer>();
+        A.add(8);
+        A.add(10);
+        A.add(6);
+        A.add(11);
+        A.add(1);
+        A.add(16);
+        A.add(8);
+        System.out.println(s.combinationSum(A, 28));
     }
 }
+

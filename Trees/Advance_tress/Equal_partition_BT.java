@@ -15,6 +15,7 @@ package Trees.Advance_tress;
 public class Equal_partition_BT {
     public int solve(TreeNode A) {
         
+        
     }
     
 }
