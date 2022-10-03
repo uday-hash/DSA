@@ -21,5 +21,6 @@ import java.util.ArrayList;
 public class Sum_the_difference {
     public int solve(ArrayList<Integer> A) {
         
+        
     }
 }

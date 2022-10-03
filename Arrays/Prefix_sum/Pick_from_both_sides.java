@@ -21,29 +21,43 @@ Problem Constraints
 
 package Arrays.Prefix_sum;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Pick_from_both_sides {
     public int solve(ArrayList<Integer> A, int B) {
-        int N = A.size();
-        int[] prefix = new int[N];
-        int[] suffix = new int[N];
+        if (B >= A.size()) {
+            int sum = 0;
+            for (int i = 0; i < A.size(); i++) {
+                sum = sum + A.get(i);
+            }
+            return sum;
+        }
         int sum = 0;
-        for (int i = 0; i < N; i++) {
-            sum += A.get(i);
-            prefix[i] = sum;
+        for (int i = 0; i < B; i++) {
+            sum = sum + A.get(i);
         }
-        sum = 0;
-        for (int i = N - 1; i >= 0; i--) {
-            sum += A.get(i);
-            suffix[i] = sum;
-        }
-        int max = Integer.MIN_VALUE;
-        for (int i = 0; i <= B; i++) {
-            int left = i - 1 >= 0 ? prefix[i - 1] : 0;
-            int right = N - B + i - 1 < N ? suffix[N - B + i] : 0;
-            max = Math.max(max, left + right);
+        int max = sum;
+        int i = B - 1;
+        int j = A.size() - 1;
+        while (i >= 0) {
+            sum = sum - A.get(i) + A.get(j);
+            if (sum > max) {
+                max = sum;
+            }
+            i--;
+            j--;
         }
         return max;
+    }
+    public static void main(String[] args) {
+        ArrayList<Integer> A = new ArrayList<>();
+        A.add(5);
+        A.add(-2);
+        A.add(3);
+        A.add(1);
+        A.add(2);
+        Pick_from_both_sides obj = new Pick_from_both_sides();
+        System.out.println(obj.solve(A, 3));
+        
     }
 }

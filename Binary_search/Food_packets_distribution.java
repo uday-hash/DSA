@@ -20,7 +20,8 @@ package Binary_search;
 import java.util.ArrayList;
 
 public class Food_packets_distribution {
-    public int solve(ArrayList<Integer> A, int B) {
+    public int solve(ArrayList<Integer> A, int B) { 
+        
         
     }
     

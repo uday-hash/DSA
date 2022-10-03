@@ -20,11 +20,26 @@ Problem Constraints
 
 package Bit_manipulation;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Bit_compression {
     public int compressBits(ArrayList<Integer> A) {
+        int n=A.size();
+        int ans=0;
+        for(int i=0; i<n; ++i)
+        ans^=A.get(i);
+        return ans;
 
     }
+    public static void main(String[] args) {
+        Bit_compression obj=new Bit_compression();
+        ArrayList<Integer> A=new ArrayList<>();
+        A.add(1);
+        A.add(2);
+        A.add(3);
+        A.add(4);
+        System.out.println(obj.compressBits(A));
+    }
+
     
 }

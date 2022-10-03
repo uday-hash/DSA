@@ -15,8 +15,8 @@ Problem Constraints
 
 package Arrays.SubArrays;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+
 
 public class Sum_of_all_subarrays {
     public Long subarraySum(ArrayList<Integer> A) {

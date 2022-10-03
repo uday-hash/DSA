@@ -11,65 +11,50 @@ Return "YES" if it is possible; otherwise, return "NO" (without quotes).
 Problem Constraints
 1 <= |A|, A[i] <= 106
 
-Input Format
-The first and the only input argument is an integer array, A.
-
-
-
-Output Format
-Return a string "YES" or "NO" denoting the answer.
-
-Example Input
-Input 1:
-
- A = [2, 4, 8, 6]
-Input 2:
-
- A = [2, 4, 8, 7, 6]
-
-
-Example Output
-Output 1:
-
- "YES"
-Output 2:
-
- "NO"
-
-
-Example Explanation
-Explanation 1:
-
-We can divide A into [2, 4] and [8, 6].
-Explanation 2:
-
-There is no way to divide the array into even length subarrays.
-
  */
 
 
 package Arrays.SubArrays;
 
+import java.util.*;
+
 public class Even_subarrays {
-    public String solve(int[] A) {
-        int n = A.length;
-        if(n == 1){
-            if(A[0]%2 == 0){
-                return "YES";
+    public String solve(ArrayList<Integer> A) {
+        int count = 0;
+        for (int i = 0; i < A.size(); i++) {
+            if (A.get(i) % 2 == 0) {
+                count++;
             }
+        }
+        if (count == 0) {
             return "NO";
         }
-        if(A[0]%2 == 0 && A[n-1]%2 == 0){
+        if (count == A.size()) {
             return "YES";
         }
-        return "NO";
-        
+        if (count == 1) {
+            if (A.get(0) % 2 == 0 || A.get(A.size() - 1) % 2 == 0) {
+                return "YES";
+            } else {
+                return "NO";
+            }
+        }
+        return "YES";
     }
     public static void main(String[] args) {
+        ArrayList<Integer> A = new ArrayList<>();
+        A.add(1);
+        A.add(2);
+        A.add(1);
+        A.add(2);
+        A.add(1);
+        A.add(2);
+        A.add(1);
+        A.add(2);
         Even_subarrays obj = new Even_subarrays();
-        int[] A = {188};
         System.out.println(obj.solve(A));
     }
-
-
+}
+    }   
+    
 }

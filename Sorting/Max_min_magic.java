@@ -29,11 +29,10 @@ N is even
  */
 package Sorting;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Max_min_magic {
     public ArrayList<Integer> solve(ArrayList<Integer> A) {
         
-
     }
 }

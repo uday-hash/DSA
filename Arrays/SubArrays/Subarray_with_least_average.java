@@ -12,27 +12,40 @@ Problem Constraints
 
 package Arrays.SubArrays;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Subarray_with_least_average {
     public int solve(ArrayList<Integer> A, int B) {
-        int min = Integer.MAX_VALUE;
-        int index = 0;
-        for (int i = 0; i < A.size() - B + 1; i++) {
-            int sum = 0;
-            for (int j = i; j < i + B; j++) {
-                sum += A.get(j);
-            }
-            if (sum < min) {
-                min = sum;
-                index = i;
+        int n = A.size();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = A.get(i);
+        }
+        int sum = 0;
+        int min_sum = Integer.MAX_VALUE;
+        int min_index = 0;
+        for (int i = 0; i < B; i++) {
+            sum = sum + arr[i];
+        }
+        min_sum = sum;
+        for (int i = B; i < n; i++) {
+            sum = sum - arr[i - B] + arr[i];
+            if (sum < min_sum) {
+                min_sum = sum;
+                min_index = i - B + 1;
             }
         }
-        return index;
+        return min_index;
     }
     public static void main(String[] args) {
+        ArrayList<Integer> A = new ArrayList<>();
+        A.add(1);
+        A.add(2);
+        A.add(3);
+        A.add(4);
+        A.add(5);
         Subarray_with_least_average obj = new Subarray_with_least_average();
-        System.out.println(obj.solve(new ArrayList<>(List.of(3, 7, 90, 20, 10, 50, 40)), 3));
+        System.out.println(obj.solve(A, 3));
     }
-    
 }
+    

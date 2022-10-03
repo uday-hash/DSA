@@ -26,6 +26,8 @@ public class Linked_list {
     public static void insert_node(int position, int value) {
         // @params position, integer
         // @params value, integer
+
+
     }
 
     public static void delete_node(int position) {
