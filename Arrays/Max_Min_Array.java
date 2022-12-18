@@ -1,7 +1,6 @@
 package Arrays;
 
-import java.lang.*;
-import java.util.*;
+import java.util.Scanner;
 
 public class Max_Min_Array {
     public static void main(String[] args) {

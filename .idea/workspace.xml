@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f522a00a-371d-4a60-944e-d9e863666b6f" name="Changes" comment="DSA">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DSA.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aggregation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Arrays/Max_Min_Array.java" beforeDir="false" afterPath="$PROJECT_DIR$/Arrays/Max_Min_Array.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Arrays/Reverse_array.java" beforeDir="false" afterPath="$PROJECT_DIR$/Arrays/Reverse_array.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Arrays/Rotation_game.java" beforeDir="false" afterPath="$PROJECT_DIR$/Arrays/Rotation_game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Arrays/Search_element.java" beforeDir="false" afterPath="$PROJECT_DIR$/Arrays/Search_element.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Arrays/SubArrays/permutation.java" beforeDir="false" afterPath="$PROJECT_DIR$/Arrays/SubArrays/permutation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Child.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maths/Is_it_parabola.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maths/Linear_recuurence.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maths/No_zeros.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maths/Travelling_businessman.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Myclass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quizz.java" beforeDir="false" afterPath="$PROJECT_DIR$/Quizz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quizz2.java" beforeDir="false" afterPath="$PROJECT_DIR$/Quizz2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Strings/ReverseString.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="recentSearchFilters">
+      <list>
+        <option value="state:open" />
+      </list>
+    </option>
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="67422a89-52e3-49da-a484-0a8cf7920404" />
+        <option name="url" value="https://github.com/uday-hash/DSA.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2EiA3Qs8AlQ1gWaRPe6aY2FfhTy" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/uday/DSA"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.Add_binary_strings">
+    <configuration name="Add_binary_strings" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Bit_manipulation.Add_binary_strings" />
+      <module name="DSA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Bit_manipulation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Mod_string" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Modular_Arithmatic.Mod_string" />
+      <module name="DSA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Modular_Arithmatic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Output" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Recursion.Output" />
+      <module name="DSA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Recursion.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Simple_recusrion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Recursion.Simple_recusrion" />
+      <module name="DSA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Recursion.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Sum_of_Digits" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Recursion.Sum_of_Digits" />
+      <module name="DSA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Recursion.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Add_binary_strings" />
+        <item itemvalue="Application.Mod_string" />
+        <item itemvalue="Application.Sum_of_Digits" />
+        <item itemvalue="Application.Output" />
+        <item itemvalue="Application.Simple_recusrion" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f522a00a-371d-4a60-944e-d9e863666b6f" name="Changes" comment="" />
+      <created>1663067879212</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663067879212</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="DSa" />
+    <MESSAGE value="DSA" />
+    <option name="LAST_COMMIT_MESSAGE" value="DSA" />
+  </component>
+</project>
