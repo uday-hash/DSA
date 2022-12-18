@@ -1,0 +1,28 @@
+What will be the output of the following code:
+
+#include <unistd.h>
+main(){
+      fork();
+      fork();
+      printf("Hi");
+
+}
+
+Ans: HiHiHiHi  
+
+// How many Processes (fork() function) will be created?
+
+#include <unistd.h>
+main(){
+    int i;
+    for(i=0;i<10;i++){
+        if(i%2==0)
+            fork();
+    return 0;
+    }
+}
+
+
+Ans: 32         Formula: 2^Number of forks
+
+No of Child Processes = 2^5 - 1 = 31    Formula: 2^Number of forks - 1

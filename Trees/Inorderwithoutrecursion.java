@@ -28,6 +28,25 @@ public class Inorderwithoutrecursion {
         return arr;
 
     }
+    public ArrayList<Integer> inorderTraversal(TreeNode A) {
+        ArrayList<Integer> list = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode curr = A;
+        while(curr != null || stack.size() > 0){
+            while(curr != null){
+                stack.push(curr);
+                curr = curr.left;
+            }
+            curr = stack.pop();
+            list.add(curr.val);
+            curr = curr.right;
+        }
+        return list;
+        
+    }
+
+
+
     public int[] preorderTraversal(TreeNode A) {
         Stack<TreeNode> stack = new Stack<>();
         ArrayList<Integer> list = new ArrayList<>();
@@ -47,6 +66,25 @@ public class Inorderwithoutrecursion {
         }
         return arr1;
     }
+    
+    public ArrayList<Integer> preorderTraversal(TreeNode A) {
+        ArrayList<Integer> list = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode curr = A;
+        while(curr != null || stack.size() > 0){
+            while(curr != null){
+                list.add(curr.val);
+                stack.push(curr);
+                curr = curr.left;
+            }
+            curr = stack.pop();
+            curr = curr.right;
+        }
+        return list;
+     
+        
+    }
+
     public int[] postorderTraversal(TreeNode A) {
         Stack<TreeNode> stack = new Stack<>();
         ArrayList<Integer> list = new ArrayList<>();

@@ -17,6 +17,8 @@ import java.util.ArrayList;
 
 public class Elements_removal {
     public int solve(ArrayList<Integer> A) {
+        
+        
 
     }
     

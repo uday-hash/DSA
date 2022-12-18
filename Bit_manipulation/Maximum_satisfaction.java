@@ -20,6 +20,8 @@ import java.util.ArrayList;
 
 public class Maximum_satisfaction {
     public int solve(ArrayList<Integer> A) {
+        return 0;
+        
 
     }
 }

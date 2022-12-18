@@ -19,16 +19,33 @@ import java.util.ArrayList;
 
 public class Interesting_array {
     public String solve(ArrayList<Integer> A) {
-        int result = 0;
-        for (int i = 0; i < A.size(); i++) {
-            result = result ^ A.get(i);
+        int n = A.size();
+        int xor = 0;
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            xor ^= A.get(i);
+            if (A.get(i) == 1) {
+                count++;
+            }
         }
-        if (result == 0) {
+        if (xor == 0) {
+            return "Yes";
+        } else if (count == 0) {
+            return "No";
+        } else if (n % 2 == 0) {
             return "Yes";
         } else {
             return "No";
         }
     }
+
+    public static void main(String[] args) {
+        Interesting_array i = new Interesting_array();
+        ArrayList<Integer> A = new ArrayList<Integer>();
+        A.add(2);
+        A.add(3);
+        A.add(4);
+        A.add(5);
+        System.out.println(i.solve(A));
     }
-    
 }
